@@ -148,74 +148,52 @@ Aura AI recommends strengthening your emergency reserve before increasing long-t
 
             alerts.innerHTML = `
 
-<div class="hidden sm:block absolute left-[19px] top-6 bottom-6 w-px bg-surface-variant"></div>
+<div class="hidden sm:block absolute left-5 top-6 bottom-6 w-px bg-gray-200"></div>
 
-<div class="flex items-start gap-4 py-4 relative overflow-hidden">
+<div class="flex items-start gap-4 py-4 relative">
+    <div class="w-10 h-10 shrink-0 rounded-full bg-red-100 flex items-center justify-center ring-4 ring-white">
+        <span class="material-symbols-outlined text-red-600">warning</span>
+    </div>
 
-<div class="w-10 h-10 shrink-0 rounded-full bg-red-100 flex items-center justify-center z-10 ring-4 ring-white">
+    <div class="flex-1 min-w-0">
+        <span class="font-semibold block">Emergency Fund</span>
 
-<span class="material-symbols-outlined text-red-600">warning</span>
-
-</div>
-
-<div>
-
-<span class="font-semibold">
-Emergency Fund
-</span>
-
-<p class="text-sm text-gray-500">
-Only ${emergencyMonths} months covered.
-Aura AI recommends building 6 months.
-</p>
-
-</div>
-
+        <p class="text-sm text-gray-500 break-words">
+            Only ${emergencyMonths} months covered.
+            Aura AI recommends building 6 months.
+        </p>
+    </div>
 </div>
 
 <div class="flex items-start gap-4 py-4 relative">
+    <div class="w-10 h-10 shrink-0 rounded-full bg-purple-100 flex items-center justify-center ring-4 ring-white">
+        <span class="material-symbols-outlined text-purple-700">trending_up</span>
+    </div>
 
-<div class="w-10 h-10 shrink-0 rounded-full bg-purple-100 flex items-center justify-center z-10 ring-4 ring-white">
+    <div class="flex-1 min-w-0">
+        <span class="font-semibold block">Investment Opportunity</span>
 
-<span class="material-symbols-outlined text-purple-700">trending_up</span>
-
-</div>
-
-<div>
-
-<span class="font-semibold">
-Investment Opportunity
-</span>
-
-<p class="text-sm text-gray-500">
-Increase your SIP by ₹2,000/month to improve your LifeScore.
-</p>
-
-</div>
-
+        <p class="text-sm text-gray-500 break-words">
+            Increase your SIP by ₹2,000/month to improve your LifeScore.
+        </p>
+    </div>
 </div>
 
 <div class="flex items-start gap-4 py-4 relative">
+    <div class="w-10 h-10 shrink-0 rounded-full bg-green-100 flex items-center justify-center ring-4 ring-white">
+        <span class="material-symbols-outlined text-green-600">flag</span>
+    </div>
 
-<div class="w-10 h-10 shrink-0 rounded-full bg-green-100 flex items-center justify-center z-10 ring-4 ring-white">
+    <div class="flex-1 min-w-0">
+        <span class="font-semibold block">
+            ${data.customer.goals[0].title}
+        </span>
 
-<span class="material-symbols-outlined text-green-600">flag</span>
-
-</div>
-
-<div>
-
-<span class="font-semibold">
-${data.customer.goals[0].title}
-</span>
-
-<p class="text-sm text-gray-500">
-${goal}% completed.
-Aura AI predicts faster completion with higher SIP.
-</p>
-
-</div>
-
+        <p class="text-sm text-gray-500 break-words">
+            ${goal}% completed.
+            Aura AI predicts faster completion with higher SIP.
+        </p>
+    </div>
 </div>
 
 `;
