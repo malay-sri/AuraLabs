@@ -148,11 +148,11 @@ Aura AI recommends strengthening your emergency reserve before increasing long-t
 
             alerts.innerHTML = `
 
-<div class="absolute left-[19px] top-6 bottom-6 w-px bg-surface-variant"></div>
+<div class="hidden sm:block absolute left-[19px] top-6 bottom-6 w-px bg-surface-variant"></div>
 
-<div class="flex items-start gap-4 py-4 relative">
+<div class="flex items-start gap-4 py-4 relative overflow-hidden">
 
-<div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center z-10 ring-4 ring-white">
+<div class="w-10 h-10 shrink-0 rounded-full bg-red-100 flex items-center justify-center z-10 ring-4 ring-white">
 
 <span class="material-symbols-outlined text-red-600">warning</span>
 
@@ -175,7 +175,7 @@ Aura AI recommends building 6 months.
 
 <div class="flex items-start gap-4 py-4 relative">
 
-<div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center z-10 ring-4 ring-white">
+<div class="w-10 h-10 shrink-0 rounded-full bg-purple-100 flex items-center justify-center z-10 ring-4 ring-white">
 
 <span class="material-symbols-outlined text-purple-700">trending_up</span>
 
@@ -197,7 +197,7 @@ Increase your SIP by ₹2,000/month to improve your LifeScore.
 
 <div class="flex items-start gap-4 py-4 relative">
 
-<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center z-10 ring-4 ring-white">
+<div class="w-10 h-10 shrink-0 rounded-full bg-green-100 flex items-center justify-center z-10 ring-4 ring-white">
 
 <span class="material-symbols-outlined text-green-600">flag</span>
 
