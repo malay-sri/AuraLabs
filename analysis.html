@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aura AI - Financial Analysis</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="bg-[#F5F7FB]">
+    <div class="max-w-7xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-purple-700">
+            📊 Aura AI Financial Health Report
+        </h1>
+
+        <p class="text-gray-500 mt-2">
+            Personalized Wealth Analysis powered by Aura AI for IDBI Bank
+        </p>
+
+        <!-- Financial Health Score Card -->
+        <div
+            class="mt-8 bg-gradient-to-r from-purple-700 to-indigo-700 text-white rounded-3xl shadow-2xl p-8 transition-all duration-300 hover:translate-y-1 hover:shadow-purple-500/30 hover:shadow-2xl">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="uppercase tracking-widest text-sm opacity-80">
+                        Aura AI Financial Health
+                    </p>
+
+                    <h2 class="text-3xl font-bold mt-2">IDBI LifeScore</h2>
+
+                    <p class="mt-3 text-purple-100">
+                        Your financial health is stronger than
+                        <strong id="heroPercentile">0%</strong> of customers in your age
+                        group.
+                    </p>
+
+                    <div class="flex gap-3 mt-6">
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white/30 hover:translate-y-1 cursor-pointer">
+                            Low Risk
+                        </span>
+
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white/30 hover:translate-y-1 cursor-pointer">
+                            High Savings
+                        </span>
+
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white/30 hover:translate-y-1 cursor-pointer">
+                            Stable Income
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div id="heroLifeScore" class="text-7xl font-bold">0</div>
+
+                    <div id="heroScoreLabel" class="mt-2 text-green-300 font-semibold">
+                        Excellent
+                    </div>
+
+                    <div id="heroImprovement" class="mt-4 text-sm text-purple-200">
+                        ▲ +28 this quarter
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Card -->
+        <div
+            class="mt-6 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:translate-y-1 hover:shadow-xl">
+            <div class="flex items-center gap-2 mb-5">
+                <span class="material-symbols-outlined text-purple-700">
+                    account_balance
+                </span>
+
+                <h2 class="text-xl font-bold">Recommended IDBI Products</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div
+                    class="border rounded-2xl p-5 bg-green-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-green-600 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="material-symbols-outlined text-green-700 text-3xl">
+                            finance
+                        </span>
+
+                        <h3 class="font-bold text-lg">IDBI Mutual Fund SIP</h3>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 mt-2">
+                        Increase your SIP by ₹2,000/month to improve long-term wealth
+                        creation.
+                    </p>
+
+                    <span
+                        class="inline-block mt-4 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                        Recommended
+                    </span>
+                </div>
+
+                <div
+                    class="border rounded-2xl p-5 bg-yellow-200 hover:shadow-lg transition transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-yellow-600 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="material-symbols-outlined text-yellow-700 text-3xl">
+                            account_balance_wallet
+                        </span>
+
+                        <h3 class="font-bold text-lg">IDBI Emergency Savings</h3>
+                    </div>
+
+                    <p class="text-sm font-semibold text-gray-700 mt-2">
+                        Build a 6-month emergency reserve for greater financial security.
+                    </p>
+
+                    <span
+                        class="inline-block mt-4 px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                        High Priority
+                    </span>
+                </div>
+
+                <div
+                    class="border rounded-2xl p-5 bg-purple-200 hover:shadow-lg transition transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-purple-600 cursor-pointer">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="material-symbols-outlined text-purple-700 text-3xl">
+                            savings
+                        </span>
+
+                        <h3 class="font-bold text-lg">IDBI Fixed Deposit</h3>
+                    </div>
+
+                    <p class="text-sm font-semibold text-gray-700 mt-2">
+                        Invest surplus funds in an FD for stable, low-risk returns.
+                    </p>
+
+                    <span
+                        class="inline-block mt-4 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold ">
+                        Low Risk
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Action Plan Card -->
+        <div
+            class="mt-6 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:translate-y-1 hover:shadow-xl">
+            <div class="flex items-center gap-2 mb-5">
+                <span class="material-symbols-outlined text-purple-700">
+                    checklist
+                </span>
+
+                <h2 class="text-xl font-bold">Aura AI Action Plan</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-green-50">
+                    <div
+                        class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
+                        1
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold">Build Emergency Fund</h3>
+
+                        <p class="text-gray-600 text-sm">
+                            Save ₹20,000/month until your emergency reserve reaches 6 months
+                            of expenses.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-purple-50">
+                    <div
+                        class="w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold">
+                        2
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold">Increase SIP</h3>
+
+                        <p class="text-gray-600 text-sm">
+                            Increase your IDBI Mutual Fund SIP by ₹2,000 every month.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-blue-50">
+                    <div class="w-8 h-8 rounded-full bg-blue-700 text-white flex items-center justify-center font-bold">
+                        3
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold">Review Progress</h3>
+
+                        <p class="text-gray-600 text-sm">
+                            Aura AI will review your financial health after 90 days and
+                            generate a new LifeScore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What If Simulator card -->
+        <div id="simulatorSection"
+            class="mt-6 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:translate-y-1 hover:shadow-xl">
+            <div class="flex items-center gap-2 mb-5">
+                <span class="material-symbols-outlined text-purple-700">
+                    insights
+                </span>
+
+                <h2 class="text-xl font-bold">Aura AI What If Simulator</h2>
+            </div>
+
+            <p class="text-gray-600 mb-5 font-semibold">
+                Instantly simulate investment decisions & visualize how Aura AI predicts your future financial health.
+            </p>
+
+            <div class="space-y-3">
+                <label for="sipSlider" class="font-semibold">
+                    Monthly SIP Increase
+                </label>
+
+                <input id="sipSlider" type="range" min="0" max="10000" step="500" value="2000" class="w-full" />
+
+                <div class="flex justify-between">
+                    <span class="text-gray-500"> ₹0 </span>
+
+                    <span id="sipValue" class="font-bold text-purple-700">
+                        ₹2,000
+                    </span>
+
+                    <span class="text-gray-500"> ₹10,000 </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 mt-6">
+                <div class="bg-purple-50 rounded-xl p-4 text-center transition-all duration-300 hover:translate-y-1 hover:shadow-xl hover:border-purple-900 cursor-pointer">
+                    <p class="text-sm font-bold text-gray-500">Current</p>
+
+                    <h3 id="currentScore" class="text-3xl font-bold text-purple-700">
+                        0
+                    </h3>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-4 text-center transition-all duration-300 hover:translate-y-1 hover:shadow-xl hover:border-green-900 cursor-pointer">
+                    <p class="text-sm font-bold text-gray-500">Projected</p>
+
+                    <h3 id="projectedScore" class="text-3xl font-bold text-green-600">
+                        878
+                    </h3>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-4 text-center transition-all duration-300 hover:translate-y-1 hover:shadow-xl hover:border-blue-900 cursor-pointer">
+                    <p class="text-sm font-bold text-gray-500">Improvement</p>
+
+                    <h3 id="scoreGain" class="text-3xl font-bold text-blue-600">+8</h3>
+                </div>
+
+                <div
+                    class="col-span-3 mt-6 mx-auto w-full rounded-2xl bg-indigo-50 border border-indigo-200 p-4 transition-all duration-300 hover:translate-y-1 hover:shadow-xl hover:border-purple-600 cursor-pointer">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="material-symbols-outlined text-indigo-700">
+                            auto_awesome
+                        </span>
+
+                        <h3 class="font-semibold text-indigo-700">Aura AI Projection</h3>
+                    </div>
+
+                    <p id="projectionText" class="text-gray-700 text-sm">
+                        Increase your SIP by ₹2,000/month to improve your LifeScore and
+                        accelerate your financial goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Risk Analysis Card -->
+        <div
+            class="mt-6 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:translate-y-1 hover:shadow-xl">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-red-500"> warning </span>
+
+                <h2 class="text-xl font-bold">AI Risk Analysis</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-red-50">
+                    <span class="material-symbols-outlined text-red-600">
+                        emergency
+                    </span>
+
+                    <div>
+                        <h3 class="font-semibold">Emergency Fund Risk</h3>
+
+                        <p class="text-gray-600 text-sm">
+                            Your emergency fund covers only
+                            <strong id="emergencyMonths">0 months</strong> of expenses. Aura
+                            AI recommends increasing it to
+                            <strong id="recommendedEmergency">6 months</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-green-50">
+                    <span class="material-symbols-outlined text-green-600">
+                        savings
+                    </span>
+
+                    <div>
+                        <h3 class="font-semibold">Strong Savings Capacity</h3>
+
+                        <p id="surplusAnalysis" class="text-gray-600 text-sm">
+                            Calculating...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lifescore.js"></script>
+    <script src="js/analysis.js"></script>
+
+    <script>
+
+        fetch("Assets/data/customer.json")
+            .then(res => res.json())
+            .then(data => {
+
+                const result = calculateLifeScore(data.customer);
+
+                let score = 0;
+
+                const target = result.score;
+
+                const scoreElement = document.getElementById("animatedScore");
+
+                const timer = setInterval(() => {
+
+                    score += Math.ceil((target - score) / 20);
+
+                    scoreElement.textContent = score;
+
+                    if (score >= target) {
+
+                        scoreElement.textContent = target;
+
+                        clearInterval(timer);
+
+                    }
+
+                }, 40);
+
+            });
+
+    </script>
+
+</body>
+
+</html>

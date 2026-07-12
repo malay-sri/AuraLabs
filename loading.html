@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aura AI</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#F5F7FB] flex items-center justify-center h-screen">
+
+    <div class="w-[420px] bg-white rounded-3xl shadow-2xl p-8 text-center">
+
+        <div class="w-20 h-20 mx-auto rounded-full bg-purple-100 flex items-center justify-center">
+
+            <span class="material-symbols-outlined text-purple-700 text-5xl">
+                auto_awesome
+            </span>
+
+        </div>
+
+        <h1 class="text-3xl font-bold text-purple-700 mt-6">
+            Aura AI
+        </h1>
+
+        <p id="statusText" class="text-gray-600 mt-3">
+
+            Initializing...
+
+        </p>
+
+        <div class="w-full bg-gray-200 rounded-full h-3 mt-8 overflow-hidden">
+
+            <div id="progressBar" class="bg-purple-700 h-3 rounded-full transition-all duration-500" style="width:0%">
+            </div>
+
+        </div>
+
+        <p id="progressPercent" class="font-bold text-purple-700 mt-4">
+
+            0%
+
+        </p>
+
+    </div>
+
+    <script>
+
+        const messages = [
+
+            "🔍 Reading customer profile...",
+            "💳 Analyzing bank transactions...",
+            "🧠 Calculating Aura LifeScore...",
+            "⚠️ Detecting financial risks...",
+            "📈 Optimizing investment strategy..."
+
+        ];
+
+        let progress = 0;
+
+        const bar = document.getElementById("progressBar");
+
+        const percent = document.getElementById("progressPercent");
+
+        const text = document.getElementById("statusText");
+
+        const timer = setInterval(() => {
+
+            progress += 20;
+
+            bar.style.width = progress + "%";
+
+            percent.textContent = progress + "%";
+
+            text.textContent = messages[Math.min(progress / 20 - 1, 4)];
+
+            if (progress >= 100) {
+
+                clearInterval(timer);
+
+                text.textContent = "✅ Analysis Complete!";
+
+                setTimeout(() => {
+
+                    window.location.href = "analysis.html";
+
+                }, 500);
+
+            }
+
+        }, 600);
+
+    </script>
+
+</body>
+
+</html>

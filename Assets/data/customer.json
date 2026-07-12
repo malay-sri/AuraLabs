@@ -1,0 +1,31 @@
+{
+    "customer": {
+        "name": "Malay Bahadur",
+        "age": 21,
+        "occupation": "Software Engineering Student",
+        "monthly_income": 700000,
+        "available_balance": 17000,
+        "monthly_expenses": 99000,
+        "monthly_savings": 200000,
+        "emergency_fund": 900000,
+        "investments": {
+            "mutual_funds": 30000,
+            "fixed_deposit": 25000,
+            "gold": 50000
+        },
+        "goals": [
+            {
+                "title": "Buy a Car",
+                "target": 1200000,
+                "current": 350000,
+                "deadline": "2029"
+            },
+            {
+                "title": "Europe Trip",
+                "target": 400000,
+                "current": 120000,
+                "deadline": "2028"
+            }
+        ]
+    }
+}
