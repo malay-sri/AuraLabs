@@ -2,7 +2,8 @@
     "customer": {
         "name": "Malay Bahadur",
         "age": 21,
-        "occupation": "Software Engineering Student",
+        "occupation": "Artificial Intelligence & Machine Learning Undergraduate",
+        "lifeScore": 790,
         "monthly_income": 70000,
         "available_balance": 17000,
         "monthly_expenses": 9000,
